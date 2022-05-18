@@ -1,0 +1,12 @@
+### Send POST request with body as parameters
+POST http://localhost:8080/gate/send
+Content-Type: application/x-www-form-urlencoded
+
+message=Hello, Core from Gate
+
+
+### Send POST request with body as parameters
+POST http://localhost:8081/core/send
+Content-Type: application/x-www-form-urlencoded
+
+message=Hello, Gate from Core
