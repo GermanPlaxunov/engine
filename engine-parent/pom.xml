@@ -8,6 +8,13 @@
     <packaging>pom</packaging>
     <version>1.0</version>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.7</version>
+        <relativePath/>
+    </parent>
+
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
@@ -15,6 +22,7 @@
         <lombok.version>1.18.22</lombok.version>
         <kafka.version>3.2.0</kafka.version>
         <spring.kafka.version>2.8.6</spring.kafka.version>
+        <eureka.version>3.1.2</eureka.version>
     </properties>
 
     <dependencyManagement>
@@ -69,6 +77,17 @@
                 <version>${spring.kafka.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>${eureka.version}</version>
+            </dependency>
+           <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${eureka.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
