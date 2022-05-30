@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro
+		http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.9.xsd">
+
+    <!-- Properties are like aliases -->
+    <property name="now" value="now()" dbms="h2, mysql"/>
+    <property name="float" value="float4" dbms="mysql, h2"/>
+    <property name="clob" value="varchar(1000000)" dbms="h2"/>
+    <property name="uuid" value="varchar(36)" dbms="h2, mysql"/>
+
+    <!-- Included ChangeLogs -->
+    <include file="liquibase/changelog/user-changelog.xml" relativeToChangelogFile="false"/>
+
+</databaseChangeLog>

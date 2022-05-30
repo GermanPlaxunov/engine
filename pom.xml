@@ -10,6 +10,7 @@
     <version>1.0</version>
 
     <modules>
+        <module>engine-eureka</module>
         <module>engine-parent</module>
         <module>engine-gate</module>
         <module>engine-core</module>
